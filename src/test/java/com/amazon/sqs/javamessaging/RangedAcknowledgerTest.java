@@ -91,10 +91,10 @@ public class RangedAcknowledgerTest extends AcknowledgerCommon {
         assertEquals(baseQueueUrl + 1, argumentCaptor.getAllValues().get(1).getQueueUrl());
         assertEquals(10, argumentCaptor.getAllValues().get(1).getEntries().size());
 
-        assertEquals(baseQueueUrl + 1, argumentCaptor.getAllValues().get(2).getQueueUrl());
+        assertEquals(baseQueueUrl + 0, argumentCaptor.getAllValues().get(2).getQueueUrl());
         assertEquals(1, argumentCaptor.getAllValues().get(2).getEntries().size());
 
-        assertEquals(baseQueueUrl + 0, argumentCaptor.getAllValues().get(3).getQueueUrl());
+        assertEquals(baseQueueUrl + 1, argumentCaptor.getAllValues().get(3).getQueueUrl());
         assertEquals(1, argumentCaptor.getAllValues().get(3).getEntries().size());
 
         assertEquals(baseQueueUrl + 2, argumentCaptor.getAllValues().get(4).getQueueUrl());
